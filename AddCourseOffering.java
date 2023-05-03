@@ -11,6 +11,7 @@ public class AddCourseOffering {
 	private int maxEmp;
 	public static Map<String, AddCourseOffering> courseList = new HashMap<>();
 	
+	//constructor 
 	public AddCourseOffering(String courseName, String courseInstructor, LocalDate courseStartDate, int minEmp, int maxEmp) {
 		this.courseName = courseName;
 		this.courseInstructor = courseInstructor;
@@ -73,13 +74,6 @@ public class AddCourseOffering {
 	
 	//starting point
 	public static String createCourseOffering(String courseName,String courseInstructor,LocalDate courseStartDate,int minEmp,int maxEmp) {
-//		System.out.println("Hi, to add a new course please enter the below details: ");
-//		
-//		String courseName = sc.next();
-//        String courseInstructor = sc.next();
-//        LocalDate courseStartDate = LocalDate.parse(sc.next());
-//        int minEmp = sc.nextInt();
-//        int maxEmp = sc.nextInt();
         
         AddCourseOffering addCourse = new AddCourseOffering(courseName, courseInstructor, courseStartDate, minEmp, maxEmp);
 
