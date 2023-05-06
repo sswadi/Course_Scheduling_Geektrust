@@ -29,8 +29,8 @@ public class main {
 				String offeringId = parts[2];
 				int atIndex = email.indexOf('@');
 				String name = email.substring(0, atIndex); 
-
 				String courseRegistrationID = registerForTheCourse.register(email, offeringId, name);
+				System.out.println(courseRegistrationID);
 				break;
 				
 			case "ALLOT-COURSE":

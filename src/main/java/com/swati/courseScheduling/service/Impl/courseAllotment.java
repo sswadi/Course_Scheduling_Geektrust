@@ -13,8 +13,10 @@ public class courseAllotment {
 			String instructor = AddCourseOffering.getCourseInstructor(courseId);
 			LocalDate startDate = AddCourseOffering.getCourseStartDate(courseId);
 			HashMap<String, registerForTheCourse> ans = registerForTheCourse.totalCourseList.get(courseId);
+			
 
 			for(Entry<String, registerForTheCourse> entry: ans.entrySet()) {
+				
 				String courseRegistrationId = entry.getKey();
 				registerForTheCourse registerForTheCourseObj = entry.getValue().empListForACourseId.get(courseRegistrationId);
 				String email = registerForTheCourseObj.empEmail;
@@ -28,6 +30,5 @@ public class courseAllotment {
 		}
 	
 	}
-	
 	
 }

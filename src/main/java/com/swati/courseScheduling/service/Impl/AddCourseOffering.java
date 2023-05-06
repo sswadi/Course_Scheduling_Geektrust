@@ -11,7 +11,6 @@ public class AddCourseOffering {
 	private int maxEmp;
 	public static Map<String, AddCourseOffering> courseList = new HashMap<>();
 	
-	//constructor 
 	public AddCourseOffering(String courseName, String courseInstructor, LocalDate courseStartDate, int minEmp, int maxEmp) {
 		this.courseName = courseName;
 		this.courseInstructor = courseInstructor;
@@ -69,12 +68,12 @@ public class AddCourseOffering {
 	}
 
 	private static String createCourseId(String courseName, String courseInstructor) {
-		return "OFFERING-"+"courseName"+"-"+"courseInstructor";
+		return "OFFERING-"+courseName+"-"+courseInstructor;
 	}
 	
 	//starting point
 	public static String createCourseOffering(String courseName,String courseInstructor,LocalDate courseStartDate,int minEmp,int maxEmp) {
-        
+
         AddCourseOffering addCourse = new AddCourseOffering(courseName, courseInstructor, courseStartDate, minEmp, maxEmp);
 
         String courseId = createCourseId(addCourse.courseName, addCourse.courseInstructor);
@@ -82,10 +81,6 @@ public class AddCourseOffering {
 		return courseId;
 		
 	}
-	
-	
-	
-	
 	
 
 }
